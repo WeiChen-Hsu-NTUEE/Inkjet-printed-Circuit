@@ -1,0 +1,8 @@
+1. given the lapalace conflict and proximity conflict (conflict.txt)
+2. assign each object to a layer
+3. constraints:
+       (1) laplace conflict: lj (smaller) + 1 <= li (bigger)
+       (2) proximity conflict: 𝑙𝑖 + 1 ≤ 𝑙𝑗 + ℳ ⋅ 𝑞  or  𝑙𝑗 + 1 ≤ 𝑙𝑖 + ℳ ⋅ (1 − 𝑞)
+       (3) 𝑙𝑖 ≤ 𝑙tot
+4. objective function:
+       minimize 𝑙tot

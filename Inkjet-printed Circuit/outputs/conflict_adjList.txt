@@ -1,0 +1,39 @@
+proximity conflict:
+o1: o2
+o2: o1 --> o3 --> o7
+o3: o2 --> o4 --> o7 --> o9 --> o17
+o4: o3 --> o5 --> o9 --> o11 --> o17
+o5: o4
+o6: o0
+o7: o2 --> o3
+o8: o0
+o9: o3 --> o4
+o10: o0
+o11: o4
+o12: o0
+o13: o0
+o14: o0
+o15: o0
+o16: o0
+o17: o3 --> o4
+o18: o0
+
+laplace conflict:
+o1: o7
+o2: o9
+o3: o11
+o4: o13
+o5: o17
+o6: o0
+o7: o6
+o8: o0
+o9: o8
+o10: o0
+o11: o10
+o12: o0
+o13: o12
+o14: o0
+o15: o0
+o16: o15
+o17: o15
+o18: o0

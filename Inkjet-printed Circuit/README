@@ -1,0 +1,2 @@
+command for gnuplot:
+plot for [IDX=0:2] 'objVertex.txt' index IDX u 1:2 with lp lt IDX+1

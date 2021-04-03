@@ -1,0 +1,105 @@
+HeuristicLayerAssignment() {
+
+    vector<int> topological_order = TopologicalSort(laplace_adjList, num_object)
+
+    CheckTopologicalOrder(laplace_adjList, topological_order, num_object)
+
+    vector<int> laplace_layer_num = LaplaceLayerAssignment(laplace_adjList, topological_order, num_object)
+
+    int total_layer_num = max_element(laplace_layer_num)
+
+    CheckConflictInALayer(laplace_adjList, laplace_layer_num, total_layer_num)
+
+    vector<list<int> > inverse_laplace_adjList = InverseEdge(laplace_adjList)
+
+    vector<int> inverse_Topological_order = TopologicalSort(inverse_laplace_adjList, num_object)
+
+    vector<int> inverse_laplace_layer_num = LaplaceLayerAssignment(inverse_laplace_adjList, inverse_Topological_order, num_object)
+
+    total_layer_num = max_element(inverse_laplace_layer_num)
+    for (int i = 1; i < inverse_laplace_layer_num.size(); i++) {
+        inverse_laplace_layer_num[i] = total_layer_num - inverse_laplace_layer_num[i]
+    }
+
+    CheckConflictInALayer(inverse_laplace_adjList, inverse_laplace_layer_num, total_layer_num)
+
+    ProximityLayerAssignment(proximity_adjList, laplace_layer_num, inverse_laplace_layer_num, total_layer_num)
+ 
+
+}
+
+LaplaceLayerAssignment(laplace_adjList, topological_order, num_object) {
+    layer_num(num_object + 1, 0)
+    for (i = 1; i < topological_order.size(); i++) {
+        for (it = laplace_adjList[Topological_order[i]].begin(); it != laplace_adjList[Topological_order[i]].end(); it++){
+            if (*it == 0) continue;
+            if (layer_num[Topological_order[i]] >= layer_num[*it]) layer_num[*it] = layer_num[Topological_order[i]] + 1;
+        }
+    }
+    return layer_num
+}
+
+ProximityLayerAssignment(proximity_adjList, laplace_layer_num, inverse_laplace_layer_num, total_layer_num) {
+    vector<int> proximity_layer_num = laplace_layer_num;
+    vector<bool> moveable(proximity_layer_num.size(), 1);  // 1 stands for moveable
+    for (int i = 0; i < proximity_layer_num.size(); i++) {
+        if (laplace_layer_num[i] == inverse_laplace_layer_num[i]) {
+            changeable[i] = 0;
+        }
+    }
+
+    for (int i = 1; i < proximity_adjList.size(); i++) {
+        for (it = proximity_adjList[i].begin(); it != proximity_adjList[i].end(); it++) {
+            if (*it == 0) continue
+            if (proximity_layer_num[i] == proximity_layer_num[*it]) { // proximity_conflict happens in a layer
+                if (moveable[i] == 0) {
+                    if (moveable[*it] == 0) {
+                        // both of the objects have unchangeable layer_num
+                        // all the objects lying on the layers behind the one *it lying on should be moved back for 1 layer
+                        for (int j = 1; j < proximity_layer_num.size(); j++) {
+                            if (proximity_layer_num[j] > proximity_layer_num[*it]) proximity_layer_num[j]++;
+                        }
+                        proximity_layer_num[*it]++;
+                        continue;
+                    }
+
+                    // move *it
+                    proximity_layer_num[*it]++;
+                    for (it_it = proximity_adjList[*it].begin(); it_it != proximity_adjList[*it].end(); it_it++) {
+                        if (proximity_layer_num[*it] != proximity_layer_num[*it_it]) {
+                            continue;
+                        }
+                        if (proximity_layer_num[*it] == proximity_layer_num[*it_it]) {  // conflicts happen
+                            if (proximity_layer_num[*it] == inverse_laplace_layer_num[*it]) {  // can't move to a later layer anymore
+                                proximity_layer_num[*it]++;
+                                for (int j = 1; j < proximity_layer_num.size(); j++) {         // move all the objects lying on the layers behind the one *it lies on
+                                    if (proximity_layer_num[j] >= proximity_layer_num[*it]) proximity_layer_num[j]++;
+                                }
+                                continue;
+                            }
+                        }
+                    }
+                }
+
+                else {  // move i
+                    proximity_layer_num[i]++;
+                    for (list<int>::iterator i_it = proximity_adjList[i].begin(); i_it != proximity_adjList[i].end(); i_it++) {
+                        if (proximity_layer_num[i] != proximity_layer_num[*i_it]) {
+                            continue;
+                        }
+                        if (proximity_layer_num[i] == proximity_layer_num[*i_it]) {
+                            if (proximity_layer_num[i] == inverse_laplace_layer_num[i]) {
+                                proximity_layer_num[i]++;
+                                for (int j = 1; j < proximity_layer_num.size(); j++) {
+                                    if (proximity_layer_num[j] >= proximity_layer_num[i]) proximity_layer_num[j]++;
+                                }
+                                continue;
+                            }
+                            proximity_layer_num[i]++;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,666 @@
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ sudo apt-get update
+[sudo] password for edge:
+Err:1 http://archive.ubuntu.com/ubuntu focal InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+Err:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Reading package lists... Done
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ sudo apt-get install gnuplot
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Suggested packages:
+  gnuplot-doc
+The following NEW packages will be installed:
+  gnuplot
+0 upgraded, 1 newly installed, 0 to remove and 132 not upgraded.
+Need to get 0 B/3792 B of archives.
+After this operation, 32.8 kB of additional disk space will be used.
+Selecting previously unselected package gnuplot.
+(Reading database ... 65679 files and directories currently installed.)
+Preparing to unpack .../gnuplot_5.2.8+dfsg1-2_all.deb ...
+Unpacking gnuplot (5.2.8+dfsg1-2) ...
+Setting up gnuplot (5.2.8+dfsg1-2) ...
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ sudo apt-get update gnuplot
+E: The update command takes no arguments
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ help
+GNU bash, version 5.0.17(1)-release (x86_64-pc-linux-gnu)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                                                         history [-c] [-d offset] [n] or history -anrw [filename] or histo>
+ (( expression ))                                                     if COMMANDS; then COMMANDS; [ elif COMMANDS; then COMMANDS; ]... >
+ . filename [arguments]                                               jobs [-lnprs] [jobspec ...] or jobs -x command [args]
+ :                                                                    kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kil>
+ [ arg... ]                                                           let arg [arg ...]
+ [[ expression ]]                                                     local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]                                       logout [n]
+ bg [job_spec ...]                                                    mapfile [-d delim] [-n count] [-O origin] [-s count] [-t] [-u fd]>
+ bind [-lpsvPSVX] [-m keymap] [-f filename] [-q name] [-u name] [-r>  popd [-n] [+N | -N]
+ break [n]                                                            printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]                                    pushd [-n] [+N | -N | dir]
+ caller [expr]                                                        pwd [-LP]
+ case WORD in [PATTERN [| PATTERN]...) COMMANDS ;;]... esac           read [-ers] [-a array] [-d delim] [-i text] [-n nchars] [-N nchar>
+ cd [-L|[-P [-e]] [-@]] [dir]                                         readarray [-d delim] [-n count] [-O origin] [-s count] [-t] [-u f>
+ command [-pVv] command [arg ...]                                     readonly [-aAf] [name[=value] ...] or readonly -p
+ compgen [-abcdefgjksuv] [-o option] [-A action] [-G globpat] [-W w>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DEI] [-o option] [-A action] [-G >  select NAME [in WORDS ... ;] do COMMANDS; done
+ compopt [-o|+o option] [-DEI] [name ...]                             set [-abefhkmnptuvxBCHP] [-o option-name] [--] [arg ...]
+ continue [n]                                                         shift [n]
+ coproc [NAME] command [redirections]                                 shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=value] ...]                      source filename [arguments]
+ dirs [-clpv] [+N] [-N]                                               suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid ...]                            test [expr]
+ echo [-neE] [arg ...]                                                time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name ...]                         times
+ eval [arg ...]                                                       trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [arguments ...]] [redirection ...]     true
+ exit [n]                                                             type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or export -p                         typeset [-aAfFgilnrtux] [-p] name[=value] ...
+ false                                                                ulimit [-SHabcdefiklmnpqrstuvxPT] [limit]
+ fc [-e ename] [-lnr] [first] [last] or fc -s [pat=rep] [command]     umask [-p] [-S] [mode]
+ fg [job_spec]                                                        unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS; done                         unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS; done                        until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name () { COMMANDS ; }               variables - Names and meanings of some shell variables
+ getopts optstring name [arg]                                         wait [-fn] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ...]                            while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                                            { COMMANDS ; }
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ gnuplot
+
+        G N U P L O T
+        Version 5.2 patchlevel 8    last modified 2019-12-01
+
+        Copyright (C) 1986-1993, 1998, 2004, 2007-2019
+        Thomas Williams, Colin Kelley and many others
+
+        gnuplot home:     http://www.gnuplot.info
+        faq, bugs, etc:   type "help FAQ"
+        immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type is now 'qt'
+gnuplot> plot sin(x)
+qt.qpa.xcb: could not connect to display
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, xcb.
+
+Could not connect to existing gnuplot_qt. Starting a new one.
+qt.qpa.xcb: could not connect to display
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, xcb.
+
+
+Warning: slow font initializationgnuplot> q
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ sudo apt-get reinstall gnuplot
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+0 upgraded, 0 newly installed, 1 reinstalled, 0 to remove and 132 not upgraded.
+Need to get 0 B/3792 B of archives.
+After this operation, 0 B of additional disk space will be used.
+(Reading database ... 65683 files and directories currently installed.)
+Preparing to unpack .../gnuplot_5.2.8+dfsg1-2_all.deb ...
+Unpacking gnuplot (5.2.8+dfsg1-2) over (5.2.8+dfsg1-2) ...
+Setting up gnuplot (5.2.8+dfsg1-2) ...
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ gnuplot
+
+        G N U P L O T
+        Version 5.2 patchlevel 8    last modified 2019-12-01
+
+        Copyright (C) 1986-1993, 1998, 2004, 2007-2019
+        Thomas Williams, Colin Kelley and many others
+
+        gnuplot home:     http://www.gnuplot.info
+        faq, bugs, etc:   type "help FAQ"
+        immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type is now 'qt'
+gnuplot> plot sin(x)
+qt.qpa.xcb: could not connect to display
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, xcb.
+
+Could not connect to existing gnuplot_qt. Starting a new one.
+qt.qpa.xcb: could not connect to display
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, xcb.
+
+
+Warning: slow font initializationgnuplot> export QT_DEBUG_PLUGINS=1
+         ^
+         invalid command
+
+gnuplot> q
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ export QT_DEBUG_PLUGINS=1
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ gnuplot
+
+        G N U P L O T
+        Version 5.2 patchlevel 8    last modified 2019-12-01
+
+        Copyright (C) 1986-1993, 1998, 2004, 2007-2019
+        Thomas Williams, Colin Kelley and many others
+
+        gnuplot home:     http://www.gnuplot.info
+        faq, bugs, etc:   type "help FAQ"
+        immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type is now 'qt'
+gnuplot> plot sin(x)
+QFactoryLoader::QFactoryLoader() checking directory path "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms" ...
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqeglfs.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqeglfs.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "eglfs"
+        ]
+    },
+    "archreq": 0,
+    "className": "QEglFSIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("eglfs")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqlinuxfb.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqlinuxfb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "linuxfb"
+        ]
+    },
+    "archreq": 0,
+    "className": "QLinuxFbIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("linuxfb")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqminimal.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqminimal.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimal"
+        ]
+    },
+    "archreq": 0,
+    "className": "QMinimalIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("minimal")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqminimalegl.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqminimalegl.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimalegl"
+        ]
+    },
+    "archreq": 0,
+    "className": "QMinimalEglIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("minimalegl")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqoffscreen.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqoffscreen.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "offscreen"
+        ]
+    },
+    "archreq": 0,
+    "className": "QOffscreenIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("offscreen")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqvnc.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqvnc.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vnc"
+        ]
+    },
+    "archreq": 0,
+    "className": "QVncIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("vnc")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "xcb"
+        ]
+    },
+    "archreq": 0,
+    "className": "QXcbIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("xcb")
+QFactoryLoader::QFactoryLoader() checking directory path "/usr/lib/gnuplot/platforms" ...
+loaded library "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so"
+qt.qpa.xcb: could not connect to display
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, xcb.
+
+Could not connect to existing gnuplot_qt. Starting a new one.
+QFactoryLoader::QFactoryLoader() checking directory path "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms" ...
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqeglfs.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqeglfs.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "eglfs"
+        ]
+    },
+    "archreq": 0,
+    "className": "QEglFSIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("eglfs")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqlinuxfb.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqlinuxfb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "linuxfb"
+        ]
+    },
+    "archreq": 0,
+    "className": "QLinuxFbIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("linuxfb")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqminimal.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqminimal.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimal"
+        ]
+    },
+    "archreq": 0,
+    "className": "QMinimalIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("minimal")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqminimalegl.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqminimalegl.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimalegl"
+        ]
+    },
+    "archreq": 0,
+    "className": "QMinimalEglIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("minimalegl")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqoffscreen.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqoffscreen.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "offscreen"
+        ]
+    },
+    "archreq": 0,
+    "className": "QOffscreenIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("offscreen")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqvnc.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqvnc.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vnc"
+        ]
+    },
+    "archreq": 0,
+    "className": "QVncIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("vnc")
+QFactoryLoader::QFactoryLoader() looking at "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so"
+Found metadata in lib /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "xcb"
+        ]
+    },
+    "archreq": 0,
+    "className": "QXcbIntegrationPlugin",
+    "debug": false,
+    "version": 330752
+}
+
+
+Got keys from plugin meta data ("xcb")
+QFactoryLoader::QFactoryLoader() checking directory path "/usr/lib/gnuplot/platforms" ...
+loaded library "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/libqxcb.so"
+qt.qpa.xcb: could not connect to display
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, xcb.
+
+
+Warning: slow font initializationgnuplot> q
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ sudo apt-get install libxcb-xinerama0
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+libxcb-xinerama0 is already the newest version (1.14-2).
+libxcb-xinerama0 set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 132 not upgraded.
+edge@ROG-WEI-CHEN:/mnt/c/Users/USER$ cd ..
+edge@ROG-WEI-CHEN:/mnt/c/Users$ cd ..
+edge@ROG-WEI-CHEN:/mnt/c$ ls
+ls: cannot access 'DumpStack.log.tmp': Permission denied
+ls: cannot access 'hiberfil.sys': Permission denied
+ls: cannot access 'pagefile.sys': Permission denied
+ls: cannot access 'swapfile.sys': Permission denied
+'$GetCurrent'     'Documents and Settings'   Gurobi          'Program Files (x86)'         WDAGUtilityAccounts   eSupport
+'$Recycle.Bin'     DumpStack.log.tmp         Intel            ProgramData                  Windows               found.000
+'$WinREAgent'      ESD                       MSOCache         Recovery                     Windows10Upgrade      hiberfil.sys
+'$Windows.~WS'     Finish.log                MinGW           'System Volume Information'   _2020-06-30           pagefile.sys
+ Administrators    Go                        PerfLogs         UkLog.dat                    code                  swapfile.sys
+ DefaultAccounts   Guests                   'Program Files'   Users                        devlist.txt
+edge@ROG-WEI-CHEN:/mnt/c$ cd usr
+-bash: cd: usr: No such file or directory
+edge@ROG-WEI-CHEN:/mnt/c$ cd ..
+edge@ROG-WEI-CHEN:/mnt$ cd ..
+edge@ROG-WEI-CHEN:/$ ls
+bin   dev  home  lib    lib64   lost+found  mnt  proc  run   snap  sys  usr
+boot  etc  init  lib32  libx32  media       opt  root  sbin  srv   tmp  var
+edge@ROG-WEI-CHEN:/$ cd usr
+edge@ROG-WEI-CHEN:/usr$ ;s
+-bash: syntax error near unexpected token `;'
+edge@ROG-WEI-CHEN:/usr$ ls
+bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
+edge@ROG-WEI-CHEN:/usr$ cd lib
+edge@ROG-WEI-CHEN:/usr/lib$ ls
+NetworkManager     evolution-data-server                 libDeployPkg.so.0      man-db               sftp-server
+X11                file                                  libDeployPkg.so.0.0.0  mime                 snapd
+accountsservice    finalrd                               libdmmp.so             modprobe.d           software-properties
+apg                firmware                              libdmmp.so.0.2.0       modules              ssl
+apparmor           gcc                                   libguestlib.so.0       modules-load.d       sudo
+apt                gdm3                                  libguestlib.so.0.0.0   multipath            sysctl.d
+aspell             girepository-1.0                      libhandle.so.1         nagios               systemd
+bfd-plugins        git-core                              libhandle.so.1.0.3     netplan              sysusers.d
+binfmt.d           gnome-session                         libhgfs.so.0           networkd-dispatcher  tc
+bluetooth          gnome-settings-daemon-3.0             libhgfs.so.0.0.0       open-iscsi           terminfo
+bolt               gnome-shell                           libmbim                open-vm-tools        tmpfiles.d
+byobu              gnupg                                 libmpathcmd.so         openssh              ubiquity
+cloud-init         gnupg2                                libmpathcmd.so.0       os-release           ubuntu-release-upgrader
+cnf-update-db      gnuplot                               libmpathpersist.so     packagekit           udev
+command-not-found  go-1.13                               libmpathpersist.so.0   pkgconfig            ufw
+compat-ld          gold-ld                               libmultipath.so        pm-utils             unity-settings-daemon-1.0
+console-setup      groff                                 libmultipath.so.0      policykit-1          update-notifier
+cpp                hdparm                                libnetpbm.so.10        pppd                 upower
+crda               init                                  libnetpbm.so.10.0      pulse-13.99.1        valgrind
+cryptsetup         initcpio                              libqmi                 python2.7            x86_64-linux-gnu
+dbus-1.0           initramfs-tools                       libvgauth.so.0         python3              xfsprogs
+dpkg               ispell                                libvgauth.so.0.0.0     python3.8            xorg
+dracut             kernel                                libvmtools.so.0        recovery-mode        xserver-xorg-video-intel
+eject              klibc                                 libvmtools.so.0.0.0    rsyslog
+emacsen-common     klibc-xcgdUApi-P9SoPhW_fi5gXfvWpw.so  locale                 rygel
+environment.d      language-selector                     lsb                    sasl2
+edge@ROG-WEI-CHEN:/usr/lib$ sudo apt-get remove gnuplot
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages will be REMOVED:
+  gnuplot
+0 upgraded, 0 newly installed, 1 to remove and 132 not upgraded.
+After this operation, 32.8 kB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 65683 files and directories currently installed.)
+Removing gnuplot (5.2.8+dfsg1-2) ...
+edge@ROG-WEI-CHEN:/usr/lib$ ls
+NetworkManager     evolution-data-server                 libDeployPkg.so.0      man-db               sftp-server
+X11                file                                  libDeployPkg.so.0.0.0  mime                 snapd
+accountsservice    finalrd                               libdmmp.so             modprobe.d           software-properties
+apg                firmware                              libdmmp.so.0.2.0       modules              ssl
+apparmor           gcc                                   libguestlib.so.0       modules-load.d       sudo
+apt                gdm3                                  libguestlib.so.0.0.0   multipath            sysctl.d
+aspell             girepository-1.0                      libhandle.so.1         nagios               systemd
+bfd-plugins        git-core                              libhandle.so.1.0.3     netplan              sysusers.d
+binfmt.d           gnome-session                         libhgfs.so.0           networkd-dispatcher  tc
+bluetooth          gnome-settings-daemon-3.0             libhgfs.so.0.0.0       open-iscsi           terminfo
+bolt               gnome-shell                           libmbim                open-vm-tools        tmpfiles.d
+byobu              gnupg                                 libmpathcmd.so         openssh              ubiquity
+cloud-init         gnupg2                                libmpathcmd.so.0       os-release           ubuntu-release-upgrader
+cnf-update-db      gnuplot                               libmpathpersist.so     packagekit           udev
+command-not-found  go-1.13                               libmpathpersist.so.0   pkgconfig            ufw
+compat-ld          gold-ld                               libmultipath.so        pm-utils             unity-settings-daemon-1.0
+console-setup      groff                                 libmultipath.so.0      policykit-1          update-notifier
+cpp                hdparm                                libnetpbm.so.10        pppd                 upower
+crda               init                                  libnetpbm.so.10.0      pulse-13.99.1        valgrind
+cryptsetup         initcpio                              libqmi                 python2.7            x86_64-linux-gnu
+dbus-1.0           initramfs-tools                       libvgauth.so.0         python3              xfsprogs
+dpkg               ispell                                libvgauth.so.0.0.0     python3.8            xorg
+dracut             kernel                                libvmtools.so.0        recovery-mode        xserver-xorg-video-intel
+eject              klibc                                 libvmtools.so.0.0.0    rsyslog
+emacsen-common     klibc-xcgdUApi-P9SoPhW_fi5gXfvWpw.so  locale                 rygel
+environment.d      language-selector                     lsb                    sasl2
+edge@ROG-WEI-CHEN:/usr/lib$ cd gnuplot
+edge@ROG-WEI-CHEN:/usr/lib/gnuplot$ ls
+gnuplot_qt  gnuplot_x11
+edge@ROG-WEI-CHEN:/usr/lib/gnuplot$ cd ..
+edge@ROG-WEI-CHEN:/usr/lib$ rm gnuplot
+rm: cannot remove 'gnuplot': Is a directory
+edge@ROG-WEI-CHEN:/usr/lib$ rmdir gnuplot
+rmdir: failed to remove 'gnuplot': Permission denied
+edge@ROG-WEI-CHEN:/usr/lib$ sudo rmdir gnuplot
+rmdir: failed to remove 'gnuplot': Directory not empty
+edge@ROG-WEI-CHEN:/usr/lib$ cd gnuplot
+edge@ROG-WEI-CHEN:/usr/lib/gnuplot$ ls
+gnuplot_qt  gnuplot_x11
+edge@ROG-WEI-CHEN:/usr/lib/gnuplot$ rm gnuplot_qt
+rm: remove write-protected regular file 'gnuplot_qt'? y
+rm: cannot remove 'gnuplot_qt': Permission denied
+edge@ROG-WEI-CHEN:/usr/lib/gnuplot$ sudo rm gnuplot_qt
+edge@ROG-WEI-CHEN:/usr/lib/gnuplot$ sudo rm gnuplot_x11
+edge@ROG-WEI-CHEN:/usr/lib/gnuplot$ ls
+edge@ROG-WEI-CHEN:/usr/lib/gnuplot$ cd ..
+edge@ROG-WEI-CHEN:/usr/lib$ sudo rm gnuplot
+rm: cannot remove 'gnuplot': Is a directory
+edge@ROG-WEI-CHEN:/usr/lib$ sudo rmdir gnuplot
+edge@ROG-WEI-CHEN:/usr/lib$ ls
+NetworkManager     evolution-data-server                 libDeployPkg.so.0.0.0  mime                 snapd
+X11                file                                  libdmmp.so             modprobe.d           software-properties
+accountsservice    finalrd                               libdmmp.so.0.2.0       modules              ssl
+apg                firmware                              libguestlib.so.0       modules-load.d       sudo
+apparmor           gcc                                   libguestlib.so.0.0.0   multipath            sysctl.d
+apt                gdm3                                  libhandle.so.1         nagios               systemd
+aspell             girepository-1.0                      libhandle.so.1.0.3     netplan              sysusers.d
+bfd-plugins        git-core                              libhgfs.so.0           networkd-dispatcher  tc
+binfmt.d           gnome-session                         libhgfs.so.0.0.0       open-iscsi           terminfo
+bluetooth          gnome-settings-daemon-3.0             libmbim                open-vm-tools        tmpfiles.d
+bolt               gnome-shell                           libmpathcmd.so         openssh              ubiquity
+byobu              gnupg                                 libmpathcmd.so.0       os-release           ubuntu-release-upgrader
+cloud-init         gnupg2                                libmpathpersist.so     packagekit           udev
+cnf-update-db      go-1.13                               libmpathpersist.so.0   pkgconfig            ufw
+command-not-found  gold-ld                               libmultipath.so        pm-utils             unity-settings-daemon-1.0
+compat-ld          groff                                 libmultipath.so.0      policykit-1          update-notifier
+console-setup      hdparm                                libnetpbm.so.10        pppd                 upower
+cpp                init                                  libnetpbm.so.10.0      pulse-13.99.1        valgrind
+crda               initcpio                              libqmi                 python2.7            x86_64-linux-gnu
+cryptsetup         initramfs-tools                       libvgauth.so.0         python3              xfsprogs
+dbus-1.0           ispell                                libvgauth.so.0.0.0     python3.8            xorg
+dpkg               kernel                                libvmtools.so.0        recovery-mode        xserver-xorg-video-intel
+dracut             klibc                                 libvmtools.so.0.0.0    rsyslog
+eject              klibc-xcgdUApi-P9SoPhW_fi5gXfvWpw.so  locale                 rygel
+emacsen-common     language-selector                     lsb                    sasl2
+environment.d      libDeployPkg.so.0                     man-db                 sftp-server
+edge@ROG-WEI-CHEN:/usr/lib$ cd gnupg
+edge@ROG-WEI-CHEN:/usr/lib/gnupg$ ls
+dirmngr_ldap  gpg-check-pattern  gpg-preset-passphrase  gpg-protect-tool  gpg-wks-client
+edge@ROG-WEI-CHEN:/usr/lib/gnupg$ cd ..
+edge@ROG-WEI-CHEN:/usr/lib$ sudo apt-get update
+Err:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+Err:2 http://archive.ubuntu.com/ubuntu focal InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Reading package lists... Done
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+edge@ROG-WEI-CHEN:/usr/lib$ sudo apt-get install gnuplot
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Suggested packages:
+  gnuplot-doc
+The following NEW packages will be installed:
+  gnuplot
+0 upgraded, 1 newly installed, 0 to remove and 132 not upgraded.
+Need to get 0 B/3792 B of archives.
+After this operation, 32.8 kB of additional disk space will be used.
+Selecting previously unselected package gnuplot.
+(Reading database ... 65679 files and directories currently installed.)
+Preparing to unpack .../gnuplot_5.2.8+dfsg1-2_all.deb ...
+Unpacking gnuplot (5.2.8+dfsg1-2) ...
+Setting up gnuplot (5.2.8+dfsg1-2) ...
+edge@ROG-WEI-CHEN:/usr/lib$ ls
+NetworkManager     evolution-data-server                 libDeployPkg.so.0.0.0  mime                 snapd
+X11                file                                  libdmmp.so             modprobe.d           software-properties
+accountsservice    finalrd                               libdmmp.so.0.2.0       modules              ssl
+apg                firmware                              libguestlib.so.0       modules-load.d       sudo
+apparmor           gcc                                   libguestlib.so.0.0.0   multipath            sysctl.d
+apt                gdm3                                  libhandle.so.1         nagios               systemd
+aspell             girepository-1.0                      libhandle.so.1.0.3     netplan              sysusers.d
+bfd-plugins        git-core                              libhgfs.so.0           networkd-dispatcher  tc
+binfmt.d           gnome-session                         libhgfs.so.0.0.0       open-iscsi           terminfo
+bluetooth          gnome-settings-daemon-3.0             libmbim                open-vm-tools        tmpfiles.d
+bolt               gnome-shell                           libmpathcmd.so         openssh              ubiquity
+byobu              gnupg                                 libmpathcmd.so.0       os-release           ubuntu-release-upgrader
+cloud-init         gnupg2                                libmpathpersist.so     packagekit           udev
+cnf-update-db      go-1.13                               libmpathpersist.so.0   pkgconfig            ufw
+command-not-found  gold-ld                               libmultipath.so        pm-utils             unity-settings-daemon-1.0
+compat-ld          groff                                 libmultipath.so.0      policykit-1          update-notifier
+console-setup      hdparm                                libnetpbm.so.10        pppd                 upower
+cpp                init                                  libnetpbm.so.10.0      pulse-13.99.1        valgrind
+crda               initcpio                              libqmi                 python2.7            x86_64-linux-gnu
+cryptsetup         initramfs-tools                       libvgauth.so.0         python3              xfsprogs
+dbus-1.0           ispell                                libvgauth.so.0.0.0     python3.8            xorg
+dpkg               kernel                                libvmtools.so.0        recovery-mode        xserver-xorg-video-intel
+dracut             klibc                                 libvmtools.so.0.0.0    rsyslog
+eject              klibc-xcgdUApi-P9SoPhW_fi5gXfvWpw.so  locale                 rygel
+emacsen-common     language-selector                     lsb                    sasl2
+environment.d      libDeployPkg.so.0                     man-db                 sftp-server
+edge@ROG-WEI-CHEN:/usr/lib$ gnuplot
+
+        G N U P L O T
+        Version 5.2 patchlevel 8    last modified 2019-12-01
+
+        Copyright (C) 1986-1993, 1998, 2004, 2007-2019
+        Thomas Williams, Colin Kelley and many others
+
+        gnuplot home:     http://www.gnuplot.info
+        faq, bugs, etc:   type "help FAQ"
+        immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type is now 'qt'
+gnuplot> plot sin(x)
+Could not start gnuplot_qt with path /usr/lib/gnuplot/gnuplot_qt
+Could not start gnuplot_qt with path /usr/lib/gnuplot/gnuplot_qt
+^C
+gnuplot> sudo apt-get install gnuplot_qt
+         ^
+         invalid command
+
+gnuplot> q
+edge@ROG-WEI-CHEN:/usr/lib$ sudo apt-get install gnuplot_qt
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package gnuplot_qt
+edge@ROG-WEI-CHEN:/usr/lib$
